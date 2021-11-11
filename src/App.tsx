@@ -1,15 +1,12 @@
-import { Main } from 'components/Main'
-import { GlobalStyles } from 'styles/global'
+import { Catalog } from 'components/Catalog'
+import { Provider } from 'react-redux'
+import store from 'store'
 
 const App = () => {
   return (
-    <>
-      <GlobalStyles />
-      <Main
-        title="React JS - Boilerplate"
-        description="React, TypeScript, Styled Components, Storybook, Eslint, Prettier, Husky, React Testing Library, Jest and Jest Styled Components!"
-      />
-    </>
+    <Provider store={store}>
+      <Catalog />
+    </Provider>
   )
 }
 
